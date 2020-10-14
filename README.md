@@ -11,4 +11,4 @@ This is a simple digital clock that I made as a application requirement for **Wo
 ✅ HTML5
 ✅ CSS3 Animations
 ✅ Javascript
-✅ JQuery Ripple
+✅ JQuery
