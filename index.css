@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
+
+* {
+  font-family: "Piedra", cursive;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background: #000;
+  background-size: cover;
+}
+
+@-webkit-keyframes spinleft {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinright {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.gear-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 800px;
+  width: 640px;
+  z-index: -1;
+}
+
+.gear-clock-body {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  top: 0;
+  right: 0px;
+}
+
+.gear-top {
+  position: absolute;
+  height: 10%;
+  width: 12%;
+  top: 7%;
+  right: 7%;
+  /* left: 60%; */
+  border-radius: 50%;
+  background: #087e3d;
+  z-index: 4;
+  -webkit-animation: spinright 10s infinite linear;
+}
+.gear-top .cog-one {
+  position: absolute;
+  height: 140%;
+  width: 20%;
+  left: 40%;
+  top: -20%;
+  border-radius: 2px;
+  background: #087e3d;
+  transform: rotate(45deg);
+}
+.gear-top .cog-two {
+  position: absolute;
+  height: 140%;
+  width: 20%;
+  left: 40%;
+  top: -20%;
+  border-radius: 2px;
+  background: #087e3d;
+  transform: rotate(-45deg);
+}
+.gear-top .cog-three {
+  position: absolute;
+  height: 140%;
+  width: 20%;
+  left: 40%;
+  top: -20%;
+  border-radius: 2px;
+  background: #087e3d;
+}
+.gear-top .cog-four {
+  position: absolute;
+  height: 140%;
+  width: 20%;
+  left: 40%;
+  top: -20%;
+  border-radius: 2px;
+  background: #087e3d;
+  transform: rotate(90deg);
+}
+
+.face-inner {
+  position: absolute;
+  height: 30%;
+  width: 40%;
+  top: 18%;
+  right: 18%;
+  border-radius: 50%;
+  background-image: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60");
+  z-index: 5;
+  overflow: hidden;
+}
+
+.face-cog {
+  position: absolute;
+  height: 30%;
+  width: 40%;
+  top: 18%;
+  right: 18%;
+  border-radius: 50%;
+  background: #074858;
+  z-index: 4;
+  -webkit-animation: spinleft 30s infinite linear;
+}
+.face-cog .cog-one {
+  position: absolute;
+  height: 130%;
+  width: 30%;
+  left: 35%;
+  top: -15%;
+  border-radius: 5px;
+  background: #074858;
+  transform: rotate(45deg);
+}
+.face-cog .cog-two {
+  position: absolute;
+  height: 130%;
+  width: 30%;
+  left: 35%;
+  top: -15%;
+  border-radius: 5px;
+  background: #074858;
+  transform: rotate(-45deg);
+}
+.face-cog .cog-three {
+  position: absolute;
+  height: 130%;
+  width: 30%;
+  left: 35%;
+  top: -15%;
+  border-radius: 5px;
+  background: #074858;
+}
+.face-cog .cog-four {
+  position: absolute;
+  height: 130%;
+  width: 30%;
+  left: 35%;
+  top: -15%;
+  border-radius: 5px;
+  background: #074858;
+  transform: rotate(90deg);
+}
+.face-middle {
+  position: absolute;
+  height: 15%;
+  width: 15%;
+  top: 45%;
+  left: 42%;
+  border-radius: 50%;
+  background: #1b2021;
+  z-index: 5;
+}
+
+.hand-hour {
+  position: absolute;
+  background: #472e8b;
+  height: 5%;
+  width: 30%;
+  top: 40%;
+  left: 34%;
+  z-index: 4;
+  border-radius: 40px 40px 40px 40px;
+  transform: rotate(90deg);
+}
+
+.hand-min {
+  position: absolute;
+  background: #0e5732;
+  height: 3%;
+  width: 30%;
+  top: 45%;
+  left: 18%;
+  z-index: 4;
+  border-radius: 40px 40px 40px 40px;
+  transform: rotate(20deg);
+}
+
+.hand-second {
+  position: absolute;
+  background: #929088;
+  height: 2%;
+  width: 30%;
+  top: 60%;
+  left: 40%;
+  z-index: 4;
+  border-radius: 40px 40px 40px 40px;
+  transform: rotate(240deg);
+}
+
+.gear-bottom {
+  position: absolute;
+  height: 10%;
+  width: 12%;
+  top: 52%;
+  right: 52%;
+  border-radius: 50%;
+  background: #347fd4;
+  z-index: 4;
+  -webkit-animation: spinright 10s infinite linear;
+}
+
+.gear-bottom .cog-one {
+  position: absolute;
+  height: 140%;
+  width: 20%;
+  left: 40%;
+  top: -20%;
+  border-radius: 2px;
+  background: #347fd4;
+  transform: rotate(45deg);
+}
+.gear-bottom .cog-two {
+  position: absolute;
+  height: 140%;
+  width: 20%;
+  left: 40%;
+  top: -20%;
+  border-radius: 2px;
+  background: #347fd4;
+  transform: rotate(-45deg);
+}
+.gear-bottom .cog-three {
+  position: absolute;
+  height: 140%;
+  width: 20%;
+  left: 40%;
+  top: -20%;
+  border-radius: 2px;
+  background: #347fd4;
+}
+.gear-bottom .cog-four {
+  position: absolute;
+  height: 140%;
+  width: 20%;
+  left: 40%;
+  top: -20%;
+  border-radius: 2px;
+  background: #347fd4;
+  transform: rotate(90deg);
+}
+
+.clock {
+  /* background: rgb(0, 12, 36); */
+  background: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60");
+  margin: 0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 40px 10px #72e3e6;
+  animation: glow 2s linear infinite alternate;
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+}
+
+@keyframes glow {
+  to {
+    box-shadow: 0px 0px 30px 20px #4b96d4;
+  }
+}
+
+.outer-circle {
+  margin: 0;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 550px;
+  height: 550px;
+  box-shadow: 0px 0px 20px 6px #48858d;
+}
+
+.clock {
+  background-color: black;
+  padding: 30px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 380px;
+  height: 380px;
+  text-align: center;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.inside {
+  position: relative;
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 250px;
+}
+
+.content {
+  margin-top: 6em;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.days {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.days span {
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+.text {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 1.6em;
+  font-size: 2.5em;
+}
+
+#alarm img {
+  width: 3em;
+  cursor: pointer;
+}
+
+#time {
+  font-size: 1.5rem;
+}
+
+#date {
+  margin-top: 100px;
+  margin-left: -100px;
+}
+
+#cal img {
+  width: 30px;
+  height: 30px;
+  left: 10%;
+}
+
+span#day {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+span#month {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+span#year {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 70px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>DigiClock-Asmee</title>
+    <meta charset="utf-8">
+
+    <link rel= "stylesheet" href="index.css"/>
+    <script src="index.js"></script>
+
+    <!-- JQUERY CDN LINK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JQUERY WATER RIPPLE PLUGIN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+        $('.clock').ripples({
+          dropRadius: 10, 
+          perturbance: 0.04,
+          
+        });
+        $('.face-inner').ripples({
+              dropRadius: 10, 
+              perturbance: 0.04,
+              
+        });
+      })
+      
+      setInterval(function() {
+        var $el = $('.face-inner');
+        var x = Math.random() * $el.outerWidth();
+        var y = Math.random() * $el.outerHeight();
+        var dropRadius = 5;
+        var strength = 0.04 + Math.random() * 0.04;
+
+        $el.ripples('drop', x, y, dropRadius, strength);
+      }, 200);
+     
+      setInterval(function() {
+        var $el = $('.clock');
+        var x = Math.random() * $el.outerWidth();
+        var y = Math.random() * $el.outerHeight();
+        var dropRadius = 30;
+        var strength = 0.04 + Math.random() * 0.04;
+
+        $el.ripples('drop', x, y, dropRadius, strength);
+      }, 600);
+    </script>
+
+  </head>
+  <body>
+    <div class="gear-box">
+      <div class="gear-clock-body">
+        <div class="face-inner">  
+          <div class="face-middle"></div>
+          <div class="hand-min"></div>
+          <div class="hand-hour"></div>
+          <div class="hand-second"></div>
+        </div>
+        <div class="face-cog">
+          <div class="cog-one"></div>
+          <div class="cog-two"></div>
+          <div class="cog-three"></div>
+          <div class="cog-four"></div>
+        </div> 
+      
+        <div class="gear-top-inner"></div>
+        <div class="gear-top">
+          <div class="cog-one"></div>
+          <div class="cog-two"></div>
+          <div class="cog-three"></div>
+          <div class="cog-four"></div>
+        </div>
+        <div class="gear-bottom">
+          <div class="cog-one"></div>
+          <div class="cog-two"></div>
+          <div class="cog-three"></div>
+          <div class="cog-four"></div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="outer-circle">   
+      <div class="clock" >
+        <div class="inside">
+            <div class="content">   
+              <p class='days'><span id="sun">SUN</span>&nbsp;<span id="mon">MON</span>&nbsp;<span id=tus"">TUE</span>&nbsp;<span id="wed">WED</span>&nbsp;<span id="thu">THU</span>&nbsp;<span id="fri">FRI</span>&nbsp;<span id="sat">SAT</span></p>
+              <br>
+              <p class="text"><span id='hours'></span> : <span id='min'> </span> : <span id='sec'></span>&nbsp;&nbsp;<span id='time'></span></p>
+              <p id=date>
+                  <span id='cal'><img src="https://icon-library.com/images/calendar-icon-svg/calendar-icon-svg-13.jpg" alt="cal" /></span>
+                  <span id='day'></span>
+                  <span id='month'></span>
+                  <span id='year'></span>
+              </p>
+              <p>
+                  <span id='alarm'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Antu_alarm-clock.svg/120px-Antu_alarm-clock.svg.png" /></span>               
+              </p>      
+          </div>   
+        </div>
+      </div>
+    </div>  
+
+  </body>
+</html>
